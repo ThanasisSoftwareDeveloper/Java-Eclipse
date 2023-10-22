@@ -1,0 +1,59 @@
+import java.util.*;//necessery for creating this topic Java object
+ public class AMKA{
+     
+    public static void main(String[] args){//ektelesimi classi-main
+    String AMKA;//metabliti
+    int d;//metabliti integer
+    int m;//metablitiinteger
+    int A[];//dilosi array
+    A = new int[11];//desmeusi memory 11 integer array
+    char temp;
+    
+    Scanner kb = new Scanner(System.in);//constractor, imports from keyboard
+    do{ //the hole controls
+    do{
+        System.out.println("Enter AMKA");//message
+        AMKA = kb.nextLine();}// Reading hole String line from keyboard 
+     while (AMKA.length() != 11);//String length checking if different from 11
+    
+    if(AMKA.length() ==11){
+    for (int i=0; i<AMKA.length(); i++){//loop controls if character is digit
+        temp = AMKA.charAt(i);//anathesi char i-ostis thesis stin temp
+        
+       
+        if (Character.isDigit(temp)){
+        
+        A[i] = temp;}//anathesi temp os integer sto A[i]
+        else
+        System.out.println("Enter valid AMKA");//message
+    }//end for
+}//end if AMKA 11 digits
+       else
+        System.out.println("Enter valid AMKA");//message     
+    
+
+        d =A[4];//metabliti, 5th array element
+        m =A[5];//metabliti, 6th array element
+        double age;//metabliti
+        //finding age
+        if (d == 0 || d  == 1){//borned on 2000 until now
+            age = (2020 - (2000 + d*10 + m));}//how old
+            else //supposed, born between 1921 and 1999
+            age = (2020 - (1900 + d*10 + m));//how old
+            System.out.println("Ηλικία: "+age);
+        
+    
+        double g;
+        g =  A[9];//metabliti , 10th array element
+            if (g%2 == 0 )//upoloipo diairesis me 2 == 0, artios arithmos
+                System.out.println("Gender: Female");
+            else  //upoloipo diairesis me 2!=0, perittos arithmos
+                System.out.println("Gender: Male");
+            
+            //asking for something else or not and exit
+            System.out.println("Continue? (Y/N)?");//message, supposed capitals
+            //accept answer form keyboard
+           }while(kb.nextLine().charAt(0)=='Y');// exit if answer Y(suppsed capital)
+
+  }//end main
+}//end class
