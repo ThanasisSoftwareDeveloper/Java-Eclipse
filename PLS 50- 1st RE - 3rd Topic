@@ -1,0 +1,116 @@
+/********************************************************************
+ *                  3rd Topic/1st Class                             *
+ ********************************************************************/
+
+import java.util.Scanner;//necessery for creating java topic
+public class Window{//dilosi class
+    //dilosi metavliton stigmiotipou
+    private String onoma;//metabliti onomatos
+    private double ipsos;//metabliti ipsous
+    private double platos;// metablit  platous
+    private String xroma;//metabliti xromatos
+    private int x;//metabliti tetmimeni
+    private int y;//metabliti tetagmeni
+    
+    
+    public Window(String a){//constractor me midenikes times
+    onoma = a;//plin onomatos
+    ipsos = 0;//anathesi midenikis timis
+    platos = 0;//anathesi midenikis timis
+    xroma = "";//anathesi midenikis timis,String
+    x = 0;//anathesi midenikis timis
+    y = 0;//anathesi midenikis timis
+}
+    
+    
+    public Window(String x1, double x2, double x3, String x4, int x5, int x6){
+        //anathesi timon metabliton, gia tis metablites antikeimenou
+        onoma = x1;
+        ipsos = x2;
+        platos = x3;
+        xroma = x4;
+        x = x5;
+        y = x6;
+    }
+     public String getName(){
+            return(onoma);//returns "onoma" window
+        }
+     public double getHeight(){
+            return(ipsos);//returns "ipsos" window
+        } 
+     public double getWidth(){
+            return(platos);//returns "platos" window
+        }
+      public String getColor(){
+            return(xroma);//returns "xroma" window 
+        }
+      public void resize(double z1, double z2){
+        ipsos = z1;//anathesi sti metabliti "ipsos"  tou antikeimenou
+        platos = z2;//anathesi sti metabliti "platos" antikeimenou
+       }
+       public void move(int z3, int z4){
+         x = z3;//anathesi sti tetmimeni, neas tetmimenis
+         y = z4;//anathesi sti tetaeni neas tetagmenis
+        }     
+        
+    public double isSquare(){//calculates, returns diagonio if square
+        double z;//diagonios
+        if (ipsos == platos){//an tetragono, paradoxi parathiro exei orthes gonies
+            return(z = Math.sqrt(Math.pow(ipsos,2)+Math.pow(platos,2)));//Pithagorio Theorima
+        }
+            else 
+            return (-1);}//an den einai tetragono
+        
+    
+    public void printWindow(){//emfanizei trexousa katastasi window, katheta
+        System.out.println("The name is "+onoma);
+        System.out.println("The height is "+ipsos);
+        System.out.println("The width is "+platos);
+        System.out.println("The color is "+xroma);
+        System.out.println("Abscissa of the definition point is "+x);
+        System.out.println("Ordinate of the definition point is "+y);
+    }
+}//end window class
+
+
+/********************************************************************
+ *                  3rd Topic/2nd Class                             *
+ ********************************************************************/
+
+public class WindowApp{//WindowApp class
+    
+    public static void main(String[] args){//main 
+    
+    Window tempWindowApp;//arxiki dilosi stigmiotipou tis Window
+    
+    
+    tempWindowApp = new Window("w1");//constractor me midenikes times, ektos onomatos
+    
+
+    tempWindowApp.printWindow();//ektiposi trexousas katastais(apo antikeimeno)
+    Window tempWindowApp2;//dilosi stigmiotipou tis Window
+    
+    //klisi constractor me mi midenikes times
+    tempWindowApp2 = new Window("w2",15,10,"blue",2,2);
+    
+
+    tempWindowApp2.printWindow();//ektiposi trexouson katastaseon(apo antikeimena)
+
+   
+    tempWindowApp.move(2,2);//metakinisi simiou orismou w1, sto w2
+    
+    tempWindowApp.printWindow();//klisi tis printWindow apo w1
+        
+    
+    tempWindowApp2.resize(7.5,20); //klisi resize apo w2
+   
+    
+
+    tempWindowApp2.printWindow();//klisi tis printWindow apo w2
+    
+    
+}//end main
+}//end WindowApp
+    
+    
+    
