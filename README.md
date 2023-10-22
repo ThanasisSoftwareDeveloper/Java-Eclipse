@@ -41,5 +41,31 @@ Example: To calculate the age based on the first part of the AMA, let's say that
 --------------------------------------------
 3rd Topic
 
+Create a Java program that contains two classes Window and WindowApp. The first represents a software window and the second is the main class which includes the main method. A window has a name (an lphanumeric), height, width, color (an alphanumeric) and a definition point (it is the top left point of the window). The coordinate values are integer and positive or zero. As an example of a window we can consider the following:
+values: height 12, width 8, white color and definition point (0, 0).
+Define the Window class to include a constructor to create windows with zero or empty values for the instance variables (depending on the type of each instance variable), with the exception of the value of the 
+window name given as a parameter,
+a constructor to create windows with values for the snapshot variables given as 
+parameters,
+a getName method that returns the name of the window,
+a getHeight method returning the height of the window,
+a getWidth method returning the width of the window,
+a getColor method returning the color of the window,
+a resize method that takes as arguments 2 new values and changes the height and width 
+of the window,
+a move method that will move the window's definition point to another point given as an 
+argument,
+an isSquare method that returns the diagonal of the window if the window is square, 
+otherwise -1,
+a printWindow method that prints the current state of the window (name, height, width, 
+color, definition point).
+
+Define the WindowApp class which will include the main method. The main will:
+create two snapshots of the Window, the first with name "w1" and with zero or empty values for the remaining snapshot variables, and the second with the values: name "w2", height 15, width 10, color "blue", and definition point (2, 2),
+prints the current state of each window,
+moves window "w1" so that its definition point coincides with that of "w2",
+prints the current state of 'w1',
+changes the data of "w2" to make it twice as wide and half as high,
+prints the current state of 'w2'
 
 
