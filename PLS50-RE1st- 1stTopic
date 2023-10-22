@@ -1,0 +1,82 @@
+import java.util.Scanner;//necessery for input datas(from util packet)
+public class Holiday{// class Holiday
+    public static void main(String[] args){//main
+          
+    double x1;// metavliti gia epilogi 1
+    double x2;// metavliti gia epilogi 2
+    double x3;//metavliti gia epilogi 3
+    double pos1;//metavliti gia pososto epilogis 1
+    double pos2;//metavliti gia pososto epilogis 2
+    double pos3;//metavliti gia pososto epilogis 3
+      
+    
+    Scanner kb = new Scanner(System.in);//constractor imports from keyboard
+    
+    
+    for(int i=0; i<20; i++){//epilogi psifou
+        System.out.println("Select which island is the best vacation destination?"+
+    "1:Mykonos 2:Santorini 3:Rodos");//message, with line changing
+    
+        x = kb.nextInt();//Reading integer from keyboard
+        if(x ==1) {
+           x1++;
+           pos1 = (x1*100/20);//pososto Mykonou epi sinolou egkiron
+        System.out.println("You have voted Mykonos");
+    }
+        else {
+            if(x ==2){
+                x2++;
+                pos2 = (x2*100/20);//pososto Santorinis epi sinolou egkiron
+                System.out.println("You have voted Santorini");   
+        }
+            else
+                if(x ==3){
+                x3++;
+                pos3 = (x3*100/20);//pososto Rodou epi sinolou egkiron
+                System.out.println("You have voted Rodos");
+        }
+                else
+                System.out.println("Your vote is invalid"+" Vote again, please");
+    }
+    }
+    System.out.println("Votes of Mykonos "+x1);//returns votes of Mykonos
+    System.out.println("Percentance of Mykonos "+pos1);//returns percentance of Mykonos
+    System.out.println("Votes of Santorini "+x2);//returns votes of Santorini
+    System.out.println("Percentance of Santorini "+pos2);//returns percentance of Santorini
+    System.out.println("Votes of Rodos "+x3);//returns votes of Rodos
+    System.out.println("Percentance of Rodos "+pos3);//returns percentance of Rodos
+        
+        if (x1>=x2 && x1>=x3){//x1 bigger or equal than x2,x3
+                System.out.println("Most voted island is Mykonos");
+            }
+            else{
+                if(x2>=x1 && x2>= x3)//x2 bigger or equal than x1,x3
+                System.out.println("Most voted island is Santorini");
+                else{
+                    if(x3>=x1 && x3>=x2)////x3 bigger or equal than x1,x3
+                    System.out.println("Most voted island is Rodos");
+                    else//anything else
+                    System.out.println("Select which island is the best vacation destination?"+
+    "1:Mykonos 2:Santorini 3:Rodos");
+                }
+        }
+    
+        if(x1<=x2 && x1<=x3){
+                System.out.println("Less voted island is Mykonos");
+            }
+            else{
+                if(x2<=x1 && x2<=x3){
+                System.out.println("Less voted island is Santorini");
+            }
+                else
+                if (x3<=x1 && x3<=x2){
+                System.out.println("Less voted island is Rodos");
+            }
+                else
+                System.out.println("Select which island is the best vacation destination?"+
+    "1:Mykonos 2:Santorini 3:Rodos");
+               }
+            
+        
+    }//main
+}//Holiday
