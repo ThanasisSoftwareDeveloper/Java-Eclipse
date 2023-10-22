@@ -11,6 +11,7 @@ After everyone has voted, the program will calculate how many votes each island 
 
 --------------------------------------------
 2nd Topic
+
 The Social Security Number (SSN) consists of 11 digits. In particular, the eleven-digit number that makes up the number consists of: 
 
 (a) the first part, which is six digits long and indicates the date of birth (YYYY/MM/YYYY) 
