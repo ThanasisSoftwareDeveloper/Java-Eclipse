@@ -69,4 +69,7 @@ prints the current state of 'w1',
 changes the data of "w2" to make it twice as wide and half as high,
 prints the current state of 'w2'
 
+Contact
+-------
+Feature requests, comments and requests for clarification should all be sent to the author at thanasis20007@gmail.com. I will try to respond quickly to all requests, so feel free to email me!
 
